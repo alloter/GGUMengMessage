@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint UMessage.podspec' to ensure this is a
+#  Be sure to run `pod spec lint GGUMengMessage.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GGUMengMessage"
-  s.version      = "1.2.6"
-  s.summary      = "友盟消息推送SDK无IDFA版"
+  s.version      = "0.0.1"
+  s.summary      = "A short description of GGUMengMessage."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,17 +25,9 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  友盟消息推送SDK无IDFA版
-  1.2.6 主要更新：
-    添加tag数量上限从64个提高到1024个。
-  1.2.3 主要更新：
-    更新了日志发送策略
-  1.2.2 主要更新：
-    新增setalias接口，使用的时候可以移除该alias绑定的历史设备。
-    新增SetUniqueID接口，允许用户以自定义的唯一标记来替换友盟SDK中目前使用的OpenUDID的方案。
                    DESC
 
-  s.homepage     = "http://dev.umeng.com/push/ios/integration"
+  s.homepage     = "http://EXAMPLE/GGUMengMessage"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -46,8 +38,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  # s.license      = "MIT (example)"
-  s.license      = { :type => "Copyright", :text => "Umeng.com , All Rights Reserved." }
+  s.license      = "MIT (example)"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -61,10 +52,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "UMeng" => "http://www.umeng.com/" }
-  # Or just: s.author    = "myfor"
-  # s.authors            = { "myfor" => "cgs@live.com" }
-  # s.social_media_url   = "http://twitter.com/myfor"
+  s.author             = { "失落王城" => "1296696830@qq.com" }
+  # Or just: s.author    = "失落王城"
+  # s.authors            = { "失落王城" => "1296696830@qq.com" }
+  # s.social_media_url   = "http://twitter.com/失落王城"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -73,7 +64,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, "5.0"
+  # s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -88,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/alloter/GGUMengMessage.git", :tag => s.version.to_s }
+  s.source       = { :git => "http://EXAMPLE/GGUMengMessage.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -99,10 +90,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "UMessage_Sdk_1.2.6/*.{h,m}"
-  # s.exclude_files = ""
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
 
-  s.public_header_files = "UMessage_Sdk_1.2.6/*.h"
+  # s.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -116,7 +107,7 @@ Pod::Spec.new do |s|
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
 
-  s.preserve_paths = "UMessage_Sdk_1.2.6/libUMessage_Sdk_1.2.6.a"
+  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -128,7 +119,7 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  s.library   = "UMessage_Sdk_1.2.6"
+  # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
 
@@ -138,9 +129,9 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
+  # s.requires_arc = true
 
-  s.xcconfig = { "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)/GGUMengMessage/UMessage_Sdk_1.2.6/" }
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
 end
