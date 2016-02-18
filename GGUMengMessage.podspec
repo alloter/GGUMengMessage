@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GGUMengMessage"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of GGUMengMessage."
+  s.version      = "1.2.6"
+  s.summary      = "友盟消息推送SDK无IDFA版."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  友盟消息推送SDK无IDFA版
                    DESC
 
-  s.homepage     = "http://EXAMPLE/GGUMengMessage"
+  s.homepage     = "http://dev.umeng.com/push/ios/integration"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +39,9 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  #s.license      = "MIT (example)"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "Copyright", :text => "Umeng.com , All Rights Reserved." }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -51,8 +53,9 @@ Pod::Spec.new do |s|
   #  Specify a social_media_url where others can refer to, for example a twitter
   #  profile URL.
   #
-
-  s.author             = { "失落王城" => "1296696830@qq.com" }
+  
+  s.author             = { "UMeng" => "http://www.umeng.com/" }
+  #s.author             = { "失落王城" => "1296696830@qq.com" }
   # Or just: s.author    = "失落王城"
   # s.authors            = { "失落王城" => "1296696830@qq.com" }
   # s.social_media_url   = "http://twitter.com/失落王城"
@@ -64,7 +67,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -79,7 +82,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/GGUMengMessage.git", :tag => "0.0.1" }
+  s.source       = { :git => "http://github.com/alloter/GGUMengMessage.git", :tag => "s.version.to_s" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,10 +93,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  #s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  #s.exclude_files = "Classes/Exclude"
+  s.source_files  = "UMessage_Sdk_1.2.6/*.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
+  s.public_header_files = "UMessage_Sdk_1.2.6/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -108,6 +113,7 @@ Pod::Spec.new do |s|
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+  s.preserve_paths = "UMessage_Sdk_1.2.6/libUMessage_Sdk_1.2.6.a"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -121,6 +127,7 @@ Pod::Spec.new do |s|
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
+  s.library   = "UMessage_Sdk_1.2.6"
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -129,8 +136,9 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
-
+  s.requires_arc = true
+  
+  s.xcconfig = { "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)/GGUMengMessage/UMessage_Sdk_1.2.6/" }
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
