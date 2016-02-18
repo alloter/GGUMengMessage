@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
   友盟消息推送SDK无IDFA版
-  1.2.5 主要更新：
+  1.2.6 主要更新：
     添加tag数量上限从64个提高到1024个。
   1.2.3 主要更新：
     更新了日志发送策略
