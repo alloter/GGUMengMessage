@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "GGUMengMessage"
   s.version      = "1.2.6"
-  s.summary      = "友盟消息推送SDK无IDFA版."
+  s.summary      = "友盟无IDFA版消息推送SDK."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,8 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  友盟消息推送SDK无IDFA版
+  从2月初开始，Apple开始拒绝采集IDFA(identifier for advertising)而未集成任何广告服务的应用进入AppStore。
+  IDFA能够较精准的识别用户，尤其对于广告主追踪广告转化率提供了很大帮助。但基于苹果的最新政策，IDFA的采集不再是无限制的，因此我们也为用户准备了无IDFA的SDK（下载）。
                    DESC
 
   s.homepage     = "http://dev.umeng.com/push/ios/integration"
@@ -39,7 +40,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  #s.license      = "MIT (example)"
+  # s.license      = "MIT (example)"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.license      = { :type => "Copyright", :text => "Umeng.com , All Rights Reserved." }
 
@@ -55,7 +56,7 @@ Pod::Spec.new do |s|
   #
   
   s.author             = { "UMeng" => "http://www.umeng.com/" }
-  #s.author             = { "失落王城" => "1296696830@qq.com" }
+  # s.author             = { "失落王城" => "1296696830@qq.com" }
   # Or just: s.author    = "失落王城"
   # s.authors            = { "失落王城" => "1296696830@qq.com" }
   # s.social_media_url   = "http://twitter.com/失落王城"
